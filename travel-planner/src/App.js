@@ -9,14 +9,46 @@ import Search from './components/Search';
 import Itinerary from './components/Itinerary';
 import Budget from './components/Budget';
 import TravelTips from './components/TravelTips';
+import CurrencyConverter from './components/CurrencyConverter';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2',
+      main: '#FF6B6B',
     },
     secondary: {
-      main: '#ff4081',
+      main: '#4ECDC4',
+    },
+    background: {
+      default: '#F7FFF7',
+    },
+  },
+  typography: {
+    fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      fontWeight: 700,
+    },
+    h2: {
+      fontWeight: 600,
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 30,
+          textTransform: 'none',
+          fontWeight: 600,
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 16,
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+        },
+      },
     },
   },
 });
@@ -33,6 +65,7 @@ function App() {
           <Route path="/itinerary" element={<Itinerary />} />
           <Route path="/budget" element={<Budget />} />
           <Route path="/tips" element={<TravelTips />} />
+          <Route path="/currency" element={<CurrencyConverter />} />
         </Routes>
       </Router>
     </ThemeProvider>

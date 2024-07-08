@@ -20,6 +20,7 @@ function Navbar() {
         <Button color="inherit" component={Link} to="/itinerary">Itinerary</Button>
         <Button color="inherit" component={Link} to="/budget">Budget</Button>
         <Button color="inherit" component={Link} to="/tips">Travel Tips</Button>
+        <Button color="inherit" component={Link} to="/currency">Currency</Button>
       </Toolbar>
     </AppBar>
   );
